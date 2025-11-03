@@ -157,19 +157,7 @@
   opacity: 0;
 }
 
-/* BODY AREA */
-.body_area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-basis: 81%;
-  background-color: #000000;  /* Changed to pure black to match your site */
-  color: #fff;
-  font-size: 16px;           /* Slightly larger for better readability */
-  padding: 40px 60px;        /* More generous spacing */
-  border-radius: 0;          /* Remove rounded corners for cleaner look */
-  text-align: center;        /* Center align text to match your layout */
-}
+
 
 /* FOOTER */
 .footer {
