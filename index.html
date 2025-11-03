@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Al Nezar's personal website - Software Engineering student sharing biodata, hobbies, and campus life experiences.">
-    <meta name="keywords" content="Al Nezar, Software Engineering, BIC21503, Web Development, Student Portfolio">
+    <meta name="description"
+        content="Al Nezar's personal website - Software Engineering student sharing biodata, hobbies, and campus life experiences.">
+    <meta name="keywords"
+        content="Al Nezar, Software Engineering, BIC21503, Web Development, Student Portfolio">
     <meta name="author" content="Al Nezar">
     <title>AL Nezar (Lab 4)</title>
     <link rel="stylesheet" href="Styles/LandingPage.css">
@@ -20,9 +22,9 @@
         </div>
 
         <div class="navigation">
-            <a href="/NavigationLinks/bioData.html">Who am I?</a>
-            <a href="/NavigationLinks/hobbies.html">My hobbies!</a>
-            <a href="/NavigationLinks/campusLife.html">My Campus Life</a>
+            <a href="NavigationLinks/bioData.html">Who am I?</a>
+            <a href="NavigationLinks/hobbies.html">My hobbies!</a>
+            <a href="NavigationLinks/campusLife.html">My Campus Life</a>
         </div>
 
         <div class="header">
@@ -30,76 +32,76 @@
         </div>
 
         <div class="content">
-            <div class="side_bar"><audio id="hoverSoundSideBar" src="Assets/Audio/batman-song-1966.mp3"
-                    preload="auto"></audio></div>
-
+            <div class="side_bar">
+                <audio id="hoverSoundSideBar" src="Assets/Audio/batman-song-1966.mp3" preload="auto"></audio>
+            </div>
 
             <div class="footer">
                 &copy; Al Nezar 2025 | BIT21503 Web Development Lab Assignment
             </div>
-
         </div>
+    </div>
 
-        <script>
-            // === Sidebar hover sound effect ===
-            const sidebar = document.querySelector('.side_bar');
-            const sidebarSound = document.getElementById('hoverSoundSideBar');
+    <script>
+        // === Sidebar hover sound effect ===
+        const sidebar = document.querySelector('.side_bar');
+        const sidebarSound = document.getElementById('hoverSoundSideBar');
 
-            sidebar.addEventListener('mouseenter', () => {
-                sidebarSound.currentTime = 0;
-                sidebarSound.play();
-            });
+        sidebar.addEventListener('mouseenter', () => {
+            sidebarSound.currentTime = 0;
+            sidebarSound.play();
+        });
 
-            sidebar.addEventListener('mouseleave', () => {
-                sidebarSound.pause();
-                sidebarSound.currentTime = 0;
-            });
+        sidebar.addEventListener('mouseleave', () => {
+            sidebarSound.pause();
+            sidebarSound.currentTime = 0;
+        });
 
-            // === Navigation links hover sound ===
-            const navLinks = document.querySelectorAll('.navigation a');
-            const hoverSound = document.getElementById('hoverSoundNav');
+        // === Navigation links hover sound ===
+        const navLinks = document.querySelectorAll('.navigation a');
+        const hoverSound = document.getElementById('hoverSoundNav');
 
-            navLinks.forEach(link => {
-                link.addEventListener('mouseenter', () => {
-                    hoverSound.currentTime = 0;
-                    hoverSound.play();
-                });
-                link.addEventListener('mouseleave', () => {
-                    hoverSound.pause();
-                    hoverSound.currentTime = 0;
-                });
-            });
-
-            // === Logo hover animation ===
-            const logo = document.querySelector('.logo img');
-            logo.addEventListener('mouseenter', () => {
-                logo.style.transition = 'transform 0.3s ease';
-                logo.style.transform = 'scale(1.2) rotate(-3deg)';
+        navLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => {
                 hoverSound.currentTime = 0;
                 hoverSound.play();
             });
-            logo.addEventListener('mouseleave', () => {
-                logo.style.transform = 'scale(1) rotate(0deg)';
+            link.addEventListener('mouseleave', () => {
                 hoverSound.pause();
                 hoverSound.currentTime = 0;
             });
+        });
 
-            // === Header hover sound ===
-            const header = document.querySelector('.header p');
-            header.addEventListener('mouseenter', () => {
-                hoverSound.currentTime = 0;
-                hoverSound.play();
-            });
-            header.addEventListener('mouseleave', () => {
-                hoverSound.pause();
-                hoverSound.currentTime = 0;
-            });
+        // === Logo hover animation ===
+        const logo = document.querySelector('.logo img');
+        logo.addEventListener('mouseenter', () => {
+            logo.style.transition = 'transform 0.3s ease';
+            logo.style.transform = 'scale(1.2) rotate(-3deg)';
+            hoverSound.currentTime = 0;
+            hoverSound.play();
+        });
+        logo.addEventListener('mouseleave', () => {
+            logo.style.transform = 'scale(1) rotate(0deg)';
+            hoverSound.pause();
+            hoverSound.currentTime = 0;
+        });
 
-            // === Dynamic footer year ===
-            const footer = document.querySelector('.footer');
-            const currentYear = new Date().getFullYear();
-            footer.innerHTML = `&copy; Al Nezar ${currentYear} | BIT21503 Web Development Lab Assignment`;
-        </script>
+        // === Header hover sound ===
+        const header = document.querySelector('.header p');
+        header.addEventListener('mouseenter', () => {
+            hoverSound.currentTime = 0;
+            hoverSound.play();
+        });
+        header.addEventListener('mouseleave', () => {
+            hoverSound.pause();
+            hoverSound.currentTime = 0;
+        });
+
+        // === Dynamic footer year ===
+        const footer = document.querySelector('.footer');
+        const currentYear = new Date().getFullYear();
+        footer.innerHTML = `&copy; Al Nezar ${currentYear} | BIT21503 Web Development Lab Assignment`;
+    </script>
 </body>
 
 </html>

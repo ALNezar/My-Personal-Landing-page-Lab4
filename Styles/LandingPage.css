@@ -1,7 +1,7 @@
+/* CUSTOM FONT */
 @font-face {
   font-family: 'Chubby Relief';
   src: url('../Assets/fonts/Chubby Relief.ttf') format('truetype');
-  /* My Custom Font */
 }
 
 * {
@@ -55,7 +55,6 @@
   color: #ffcc00;
   transform: scale(1.2) rotate(-3deg);
 }
-/* NAVIGATION BAR */
 
 /* HEADER */
 .header {
@@ -68,15 +67,13 @@
   align-items: center;
   font-family: 'Chubby Relief', sans-serif;
   font-size: 48px;
-  color: rgb(255, 255, 255)000;
+  color: #fff;
 }
 
 .header p:hover {
   color: #f02760;
   transform: scale(1.2) rotate(-3deg);
 }
-/* HEADER */
-
 
 /* SIDE BAR */
 .side_bar {
@@ -92,7 +89,7 @@
   overflow: hidden;
   cursor: pointer;
   
-  background-image: url("Assets/Images/Dr House.jpg");
+  background-image: url("../Assets/Images/Dr House.jpg");
   background-size: cover;
   background-position: center;
   
@@ -104,20 +101,13 @@
   animation: spinOnce 2.3s ease;
 }
 
-/* Define spin animation */
 @keyframes spinOnce {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(360deg) scale(1.2);
-  }
-  100% {
-    transform: rotate(0deg) scale(1);
-  }
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(360deg) scale(1.2); }
+  100% { transform: rotate(0deg) scale(1); }
 }
 
-/* Both layers fill the sidebar */
+/* Layered images */
 .side_bar::before,
 .side_bar::after {
   content: "";
@@ -129,35 +119,30 @@
 
 /* Default image */
 .side_bar::before {
-  background-image: url("Assets/Images/Dr House.jpg");
+  background-image: url("../Assets/Images/Dr House.jpg");
   opacity: 1;
   transition: opacity 0s ease;
 }
 
 /* Hover image */
 .side_bar::after {
-  background-image: url("Assets/Images/House giving death stair.webp");
+  background-image: url("../Assets/Images/House giving death stair.webp");
   opacity: 0;
   transition: opacity 10s ease;
 }
 
-/* Hover: fade in new image */
 .side_bar:hover::after {
   opacity: 1;
 }
 
-/* Hover: fade out old image */
 .side_bar:hover::before {
   opacity: 0;
 }
 
-/* When hover ends → instantly disappear (no fade-out) */
 .side_bar:not(:hover)::after {
   transition: opacity 0s ease;
   opacity: 0;
 }
-
-
 
 /* FOOTER */
 .footer {
@@ -165,7 +150,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: #000;
   color: white;
   text-align: center;
 }
