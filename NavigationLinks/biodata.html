@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Information</title>
+<link rel="stylesheet" href="/Styles/Biodata.css">
+</head>
+<body>
+  <div class="personal_container">
+
+    <div class="personal_header">Personal Information</div>
+    <div class="personal_window">
+      <table class="personal_table">
+        <audio id="hoverSoundNav" src="../Assets/Audio/generic1.wav" preload="auto"></audio>
+
+        <tr>
+          <td class="label">Name</td>
+          <td>Abdalla Nezar Elgaili Elshiekh</td>
+          <td class="photo" rowspan="5">
+            <audio id="PhotoHover" src="../Assets/Audio/vintage-hip-hop-taunt.wav" preload="auto"></audio>
+            <img src="https://media.licdn.com/dms/image/v2/D5603AQGYD-inm7tQJg/profile-displayphoto-crop_800_800/B56ZmIkswTHQAI-/0/1758932947287?e=1763596800&v=beta&t=IG632KEuKrsnDp9tD_LVntId62Top_2UNb5K76io-p8" alt="Profile Photo">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Date of Birth</td>
+          <td>June 19, 2005</td>
+        </tr>
+        <tr>
+          <td class="label">Religion</td>
+          <td>Islam</td>
+        </tr>
+        <tr>
+          <td class="label">Race</td>
+          <td>Afro-Arab</td>
+        </tr>
+        <tr>
+          <td class="label">Address</td>
+          <td>
+            <strong>State:</strong> Johor
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Contact</td>
+          <td colspan="2">
+            <strong>Email:abdallanezaree@gmail.com</strong><br>
+            <strong>Social Media:</strong> 
+            <a href="https://www.linkedin.com/in/abdalla-elshiekh-49a241251/" target="_blank">@abdalla-elshiekh</a> | 
+            <strong>Github:</strong> 
+            <a href="https://github.com/ALNezar" target="_blank">ALNezar.github.io</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Course & Institution</td>
+          <td colspan="2">
+            Bachelor of Computer Science (Software Engineering) with Honours<br>
+            Faculty of Computer Science and Information Technology<br>
+            Universiti Tun Hussein Onn Malaysia (UTHM)
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Programming Skills</td>
+          <td colspan="2">
+            <ul>
+              <li>HTML & CSS</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>C & C++</li>
+              <li>React</li>
+              <li>Spring Boot</li>
+              <li>SQL</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Hobbies</td>
+          <td colspan="2">
+            <ul>
+              <li>Making YouTube videos</li>
+              <li>Digital Art & Animation</li>
+              <li>Grand Strategy Games (HOI4, CK3, VIC2)</li>
+              <li>Embedded Development Hobby</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">2025 Wishlist</td>
+          <td colspan="2">
+            <ol>
+              <li>Master Full-Stack Web Development & Embedded Programming</li>
+              <li>Contribute to Open Source Projects</li>
+              <li>Build a Personal Portfolio Website</li>
+              <li>Learn Embedded Development</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+<script>
+
+    const tableRows = document.querySelectorAll('.personal_table tr');
+  const hoverSound = document.getElementById('hoverSoundNav');
+
+  tableRows.forEach(row => {
+      row.addEventListener('mouseenter', () => {
+          hoverSound.currentTime = 0; 
+          hoverSound.play();
+      });
+  });
+
+  const photoCell = document.querySelector('.photo');
+  const photoHoverSound = document.getElementById('PhotoHover');
+
+  photoCell.addEventListener('mouseenter', () => {
+      photoHoverSound.currentTime = 0; 
+      photoHoverSound.play();
+  });
+</script>
+
+</body>
+</html>
